@@ -1,16 +1,14 @@
-# riverpod_auth
+# riverpod, go_router, auth
 
-A new Flutter project.
+A Flutter project to test Riverpod, GoRouter and Auth (at most basic) 
 
-## Getting Started
+## About
 
-This project is a starting point for a Flutter application.
+Simple flutter application to test auth, navigation and load data from API (https://jsonplaceholder.typicode.com/users) 
 
-A few resources to get you started if this is your first Flutter project:
+User login with any email and password (no actual auth, just mock auth with simple form validator).
+Once logged in, API will call and store response to riverpod store. User can click any user in the list to navigate to User Detail Screen.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+There a navigation logic to detect user token if exist.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Logout will invalidate all data in store.
