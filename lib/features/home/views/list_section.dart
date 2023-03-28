@@ -15,7 +15,7 @@ class ListSection extends StatelessWidget {
       color: Colors.amber,
       child: ListTile(
         onTap: () {
-          context.goNamed(
+          context.pushNamed(
             'userScreen',
             queryParams: {'id': user.id.toString()},
           );
