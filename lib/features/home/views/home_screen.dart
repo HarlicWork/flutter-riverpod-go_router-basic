@@ -40,6 +40,12 @@ class HomeScreen extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         ref.read(authProvider.notifier).logout();
+
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('You have logged out!'),
+                          ),
+                        );
                       },
                       child: const Text('Sign Out'),
                     ),
