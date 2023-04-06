@@ -12,6 +12,9 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Screen'),
+        notificationPredicate: (ScrollNotification notification) {
+          return notification.depth == 1;
+        },
       ),
       body: Consumer(
         builder: (_, ref, __) {
@@ -37,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                         width: double.infinity,
                         child: ListSection(usersData: usersData)),
                     const SizedBox(height: 20),
-                    ElevatedButton(
+                    OutlinedButton(
                       onPressed: () {
                         ref.read(authProvider.notifier).logout();
 
